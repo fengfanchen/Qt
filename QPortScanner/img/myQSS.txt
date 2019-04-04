@@ -1,0 +1,85 @@
+MyLabel#minLabel{
+	image: url(:/img/min.png);
+}
+MyLabel#minLabel:hover{
+	image: url(:/img/min_hover.png);
+}
+
+MyLabel#closeLabel{
+	image: url(:/img/close.png);
+}
+MyLabel#closeLabel:hover{
+	image: url(:/img/close_hover.png);
+}
+
+QLabel#iconLabel{
+	image: url(:/img/icon.png);
+}
+QLabel#iconLabel:hover{
+	image: url(:/img/icon_hover.png);
+}
+
+QLabel#titleLabel{
+	color: rgb(200, 39, 11);
+	font: 75 12pt "华文琥珀";
+}
+
+QLabel#titleLabel:hover{
+	color: rgb(0, 85, 255);
+	font: 75 12pt "华文琥珀";
+}
+
+QLabel#timeLabel{
+	color: rgb(200, 39, 11);
+}
+
+QLabel#timeLabel:hover{
+	color: rgb(0, 85, 255);
+}
+
+QWidget#Widget{
+	background-color: rgb(0, 0, 0);
+}
+
+QWidget#mainWidget{
+	background-color: rgb(255, 255, 255);
+}
+QProgressBar{
+	color: rgb(255, 0, 0);
+}
+QProgressBar::chunk{
+	background-color: rgb(49, 49, 49);
+}
+
+QLineEdit:hover{
+	border-color: rgb(0, 0, 0);
+	border: 2px solid rgb(0, 0, 0);
+}
+
+QSpinBox:hover{
+	border-color: rgb(0, 0, 0);
+	border: 2px solid rgb(0, 0, 0);
+}
+
+QPushButton:hover{
+	border-color: rgb(0, 0, 0);
+	border: 2px solid rgb(0, 0, 0);
+}
+
+QPushButton{
+	border-radius: 4px;
+	border: none;
+	width: 75px;
+	height: 25px;
+	background: rgb(100, 100, 100);
+	color: rgb(255, 255, 255);
+}
+
+QListWidget::item{
+	color: rgb(255, 142, 61);
+}
+
+QListWidget::hover{
+	border-color: rgb(0, 0, 0);
+	border: 2px solid rgb(0, 0, 0);
+}

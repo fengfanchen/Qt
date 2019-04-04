@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>img/close.png</file>
+        <file>img/min.png</file>
+        <file>img/close_hover.png</file>
+        <file>img/icon.png</file>
+        <file>img/icon_hover.png</file>
+        <file>img/min_hover.png</file>
+        <file>img/myQSS.txt</file>
+    </qresource>
+</RCC>
