@@ -1,0 +1,1 @@
+This program shows how to use QHostInfo.
