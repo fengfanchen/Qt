@@ -1,0 +1,1 @@
+This project demonstrates how to use FileDialog QML Type.
