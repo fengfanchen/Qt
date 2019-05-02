@@ -1,0 +1,1 @@
+This project shows that the use QtWebApp frame to create HTTP server.
