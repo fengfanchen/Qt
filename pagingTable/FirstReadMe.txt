@@ -1,0 +1,1 @@
+This project shows that the how to show pages about some widgets.
