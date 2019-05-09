@@ -1,0 +1,1 @@
+This project shows that how to use JavaScript to accomplish the sliding picture.
