@@ -1,0 +1,1 @@
+My test about animation of qml.
