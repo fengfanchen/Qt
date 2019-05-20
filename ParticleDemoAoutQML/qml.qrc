@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>img/bg.jpg</file>
+        <file>img/star.png</file>
+        <file>MyParticle.qml</file>
+    </qresource>
+</RCC>
