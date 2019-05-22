@@ -1,0 +1,1 @@
+This project shows that the radioButton of QML.
