@@ -1,0 +1,1 @@
+This project shows that the how to get cookie about QWebView.
