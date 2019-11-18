@@ -1,0 +1,65 @@
+﻿<!DOCTYPE HTML>
+<html>
+   <head>
+   <meta charset="utf-8">
+   <title>websocket client</title>
+    
+      <script type="text/javascript">
+         var ws = null;
+         function WebSocketTest()
+         {
+            if ("WebSocket" in window)
+            {
+               alert("浏览器支持 WebSocket!");
+               
+               // 打开一个 web socket
+               var name = document.getElementById("name").value;
+               ws = new WebSocket("ws://192.XXX.XXX.XXX:1234/" + name);
+               //构件一个发送消息框
+               var context = '<div class="sendMsg">\n' +
+                       '           输入发送内容：<input id="sendWebMsg" />' +
+                       '           <button onclick="javascript:sendMsgToWS()">发送</button>' +
+                       '      </div>';
+               document.getElementById("sendDiv").innerHTML = context;
+               ws.onmessage = function (evt)
+               {
+                  var received_msg = evt.data;
+                  alert("接收到数据：" + received_msg);
+               };
+			   
+			   ws.onclose = function()
+			   { 
+                  // 关闭 websocket
+                  alert("连接已关闭..."); 
+               };
+            }
+            
+            else
+            {
+               // 浏览器不支持 WebSocket
+               alert("浏览器不支持 WebSocket!");
+            }
+         }
+         function sendMsgToWS(){
+            if(ws != null){
+               var msg = document.getElementById("sendWebMsg").value;
+               ws.send(msg);
+            }
+         }
+      </script>
+        
+   </head>
+   <body>
+
+		
+      <div id="sse">
+         名称：<input id="name" />
+         <button onclick="javascript:WebSocketTest()">连接 WebSocket</button>
+      </div>
+
+      <div id="sendDiv">
+
+      </div>
+      
+   </body>
+</html>
