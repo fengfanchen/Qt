@@ -1,0 +1,28 @@
+﻿生成启动时间为 2019/11/24 18:59:37。
+     1>项目“E:\Qt2019\CSHack\CSHack.vcxproj”在节点 2 上(Build 个目标)。
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppBuild.targets(345,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
+     1>CustomBuild:
+         Moc'ing widget.h...
+         Moc'ing windowhand.h...
+         Uic'ing widget.ui...
+       ClCompile:
+         D:\vs2012\VC\bin\CL.exe /c /I. /ID:\Qt5.5.1\5.5\msvc2012\include /ID:\Qt5.5.1\5.5\msvc2012\include\QtWidgets /ID:\Qt5.5.1\5.5\msvc2012\include\QtGui /ID:\Qt5.5.1\5.5\msvc2012\include\QtANGLE /ID:\Qt5.5.1\5.5\msvc2012\include\QtCore /Idebug /I. /I"D:\Qt5.5.1\5.5\msvc2012\mkspecs\win32-msvc2012" /I.\GeneratedFiles /ID:\Qt5.5.1\Qt\5.5\msvc2012\include /IC:\OPenCV3\include\opencv2 /IC:\OPenCV3\include\opencv /IC:\OPenCV3 /Zi /nologo /W3 /WX- /Od /Oy- /D _WINDOWS /D UNICODE /D WIN32 /D QT_WIDGETS_LIB /D QT_GUI_LIB /D QT_CORE_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"Win32\Debug\\" /Fd"Win32\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt -w34100 -w34189 -w44996 Debug\moc_widget.cpp Debug\moc_windowhand.cpp main.cpp widget.cpp windowhand.cpp
+         moc_widget.cpp
+         moc_windowhand.cpp
+         main.cpp
+         widget.cpp
+         windowhand.cpp
+     1>windowhand.cpp(27): warning C4100: “event”: 未引用的形参
+         正在生成代码...
+       Link:
+         D:\vs2012\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"debug\\CSHack.exe" /NOLOGO /LIBPATH:D:\Qt5.5.1\5.5\msvc2012\lib /LIBPATH:D:/qt5.5.1/5.5/msvc2012/lib /LIBPATH:D:\Qt5.5.1\5.5\msvc2012\lib /LIBPATH:C:\OPenCV3\lib D:\Qt5.5.1\5.5\msvc2012\lib\qtmaind.lib shell32.lib D:/qt5.5.1/5.5/msvc2012/lib\Qt5Cored.lib D:\Qt5.5.1\5.5\msvc2012\lib\Qt5Widgetsd.lib D:\Qt5.5.1\5.5\msvc2012\lib\Qt5Guid.lib D:\Qt5.5.1\5.5\msvc2012\lib\Qt5Cored.lib IlmImfd.lib ippicvmt.lib libjpegd.lib libpngd.lib libtiffd.lib libwebpd.lib opencv_world330d.lib zlibd.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"debug\CSHack.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /MACHINE:X86 /SAFESEH "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" Win32\Debug\moc_widget.obj
+         Win32\Debug\moc_windowhand.obj
+         Win32\Debug\main.obj
+         Win32\Debug\widget.obj
+         Win32\Debug\windowhand.obj
+         CSHack.vcxproj -> E:\Qt2019\CSHack\debug\CSHack.exe
+     1>已完成生成项目“E:\Qt2019\CSHack\CSHack.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:09.99
