@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/">
+        <file>img/oo.obj</file>
+        <file>img/1cube.obj</file>
+        <file>img/2teddy.obj</file>
+        <file>img/3cow.obj</file>
+        <file>img/4bunny.obj</file>
+        <file>img/5monkey.obj</file>
+        <file>img/6man.obj</file>
+        <file>img/7dinosaur.obj</file>
+        <file>img/8mba.obj</file>
+        <file>img/9porsche.obj</file>
+        <file>img/10Lamborghini.obj</file>
+        <file>img/11Boeing-MD-11.obj</file>
+        <file>img/12atmo_fighter.obj</file>
+        <file>img/13airplane.obj</file>
+        <file>img/14AIRBOAT.OBJ</file>
+        <file>img/15CESSNA.OBJ</file>
+        <file>img/16FLAMINGO.OBJ</file>
+        <file>img/17PORSCHE.OBJ</file>
+        <file>img/18SHUTTLE.OBJ</file>
+        <file>img/19X29.OBJ</file>
+        <file>img/20Iron Man.obj</file>
+    </qresource>
+</RCC>

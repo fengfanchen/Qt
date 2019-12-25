@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>img/1cube.obj</file>
+    </qresource>
+</RCC>
