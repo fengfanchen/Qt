@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>img/Heightmap1.png</file>
+        <file>img/Heightmap2.png</file>
+        <file>img/Heightmap3.png</file>
+        <file>img/Heightmap4.png</file>
+    </qresource>
+</RCC>
