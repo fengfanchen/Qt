@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Background.qml</file>
+        <file>BackgroundForm.ui.qml</file>
+        <file>Circle.qml</file>
+        <file>CircleForm.ui.qml</file>
+        <file>Receiver.qml</file>
+        <file>Sender.qml</file>
+    </qresource>
+</RCC>
