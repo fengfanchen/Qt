@@ -1,0 +1,96 @@
+#include "QSSLClient.h"
+#include <QSslSocket>
+#include <QSslCertificate>
+#include <QFile>
+#include <QSslKey>
+#include <QJsonDocument>
+#include <QList>
+#include <QDebug>
+
+QSSLClient::QSSLClient(QObject *parent) : QObject(parent)
+{
+    m_key = new QSslKey;
+    m_privateCertificate = new QSslCertificate;
+    m_client = new QSslSocket;
+    loadCertificate();
+
+    connect(m_client, &QSslSocket::readyRead, this, &QSSLClient::rx);
+    connect(m_client, &QSslSocket::disconnected, this, &QSSLClient::serverDisconnect);
+    connect(m_client, SIGNAL(sslErrors(QList<QSslError>)), this, SLOT(sslErrors(QList<QSslError>)));
+
+    m_client->addCaCertificates(m_publicCertificateList);
+    m_client->setPrivateKey(*m_key);
+    m_client->setLocalCertificate(*m_privateCertificate);
+    m_client->setPeerVerifyMode(QSslSocket::VerifyPeer);
+
+    qDebug() << "QSSLClient load over";
+}
+
+QSSLClient::~QSSLClient()
+{
+    delete m_privateCertificate;
+    delete m_client;
+    delete m_key;
+}
+
+void QSSLClient::connectServer()
+{
+    m_client->connectToHostEncrypted("localhost", 19999);
+    if(m_client->waitForEncrypted(5000)){
+
+        qDebug() << "Authentication Suceeded";
+    }
+    else{
+
+        qDebug("Unable to connect to server");
+        exit(0);
+    }
+}
+
+void QSSLClient::sendMsg(const QString &msg)
+{
+    m_client->write(msg.toUtf8());
+}
+
+void QSSLClient::closeSocket()
+{
+    if(m_client->disconnect())
+        m_client->close();
+}
+
+void QSSLClient::loadCertificate()
+{
+    QFile p12File(":/res/p_client.p12");
+    if(!p12File.open(QIODevice::ReadOnly)){
+
+        qDebug() << "The certificate file open failed!";
+        exit(0);
+    }
+
+    bool ok = QSslCertificate::importPkcs12(&p12File, m_key, m_privateCertificate, &m_publicCertificateList, "cccccc");
+    if(!ok){
+
+        qDebug() << "The certificate import error!";
+        exit(0);
+    }
+    p12File.close();
+}
+
+void QSSLClient::sslErrors(const QList<QSslError> &errors)
+{
+    foreach (const QSslError &error, errors)
+        qDebug() << error.errorString();
+}
+
+void QSSLClient::rx()
+{
+    QString getMsg = m_client->readAll();
+    qDebug() << getMsg;
+}
+
+void QSSLClient::serverDisconnect()
+{
+    m_client->close();
+    qDebug() << "close all";
+    exit(0);
+}

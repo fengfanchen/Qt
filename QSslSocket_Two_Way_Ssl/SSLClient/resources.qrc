@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/p_client.p12</file>
+    </qresource>
+</RCC>
