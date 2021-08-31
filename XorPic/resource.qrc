@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>lbxx.jpeg</file>
+        <file>xor.png</file>
+        <file>tghg.png</file>
+    </qresource>
+</RCC>
