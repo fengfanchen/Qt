@@ -12,12 +12,7 @@ struct MyKey{
 
     bool operator < (const MyKey &key) const{
 
-        if(this->key1 == key.key1 && this->key2 == key.key2){
-
-            return false;
-        }
-
-        return true;
+        return std::tie(key1, key2) < std::tie(key.key1, key.key2);
     }
 
     QString key1;
